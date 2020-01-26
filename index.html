@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pomodoro Timer</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--  STYLES    -->
+
+    <link
+      href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <script src="script.js" defer></script>
+    <div class="nes-balloon from-left">
+      <p class="lil">
+        According to the Pomodoro Technique, people are highly productive when we
+        work in intervals with frequent but short breaks! Use this app to work
+        for 25 minutes, and then take a timed 5 minute break. I'll ring a bell when it's time to switch!
+      </p>
+    </div>
+    <section>
+      <i class="nes-octocat animate"></i>
+      <!-- Balloon -->
+    </section>
+    <div class="nes-container is-dark with-title is-centered ">
+      <span class="nes-text is-error float-center title">
+        Pomodoro Productivity Timer
+      </span>
+      <button
+        type="button"
+        id="start-timer"
+        class="success nes-btn is-error float-center start-work"
+        onclick="showWorkMessage()"
+      >
+        Start Work
+      </button>
+      <p id="timer2" class="hide-message">Get To Work !</p>
+
+      <div class="modal">
+        <div class="modal-content">
+          <i class="nes-icon trophy is-large"></i>
+
+          <h1>Go On Break!</h1>
+          <button
+            type="button"
+            class="success button break-button close float-center"
+          >
+            Go On Break !
+          </button>
+        </div>
+      </div>
+
+      <p id="timer" class="break-message"></p>
+
+      <div class="modal2">
+        <div class="modal-content">
+          <i class="nes-icon trophy is-large"></i>
+          <h1>Back To Work !</h1>
+          <p>
+            You've Worked 30 Minutes! Click the button to work 30 more minutes!
+          </p>
+          <button
+            type="button"
+            class="success button break-button close2 float-center"
+          >
+            Back To Work !
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--  glitch button -->
+
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
